@@ -13,17 +13,25 @@ public class Apple_Tree_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("DropApple", 2f);
     }
-
+    
     // Update is called once per frame
+    void DropApple()
+    {
+        GameObject apple = Instantiate<GameObject> (applePrefab);
+        apple.transform.position = transform.position;
+        Invoke( "DropApple" , secondsBetweenAppleDrop );
+
+
+    }
     void Update()
     {
         Vector3 po5 = transform.position;
         po5.x += Speed * Time.deltaTime;
         transform.position = po5;
 
-        if (po5.x < leftAndRightEdge)
+        if (po5.x < -leftAndRightEdge)
         {
             Speed = Mathf.Abs(Speed);
         }
