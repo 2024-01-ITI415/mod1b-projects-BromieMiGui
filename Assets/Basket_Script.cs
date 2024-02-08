@@ -9,12 +9,11 @@ public class Basket_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        void Start()
-        {
-            GameObject scoreGO = GameObject.Find("ScoreCounter");
-            scoreGT = scoreGO.GetComponent<Text>();
-            scoreGT.text = "0";
-        }
+       
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreGT = scoreGO.GetComponent<Text>();
+        scoreGT.text = "0";
+        
     }
 
     // Update is called once per frame
