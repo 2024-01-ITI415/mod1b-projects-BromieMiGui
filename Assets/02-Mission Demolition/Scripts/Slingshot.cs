@@ -17,7 +17,7 @@ public class Slingshot : MonoBehaviour
     {
         
     }
-    private void Awake()
+    void Awake()
     {
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
@@ -70,6 +70,7 @@ public class Slingshot : MonoBehaviour
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * VelocityMult;
+            FollowCam.POI = projectile;
             projectile = null;
         }
 

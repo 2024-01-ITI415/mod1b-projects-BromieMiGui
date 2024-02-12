@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -215,6 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 511005939}
+  - component: {fileID: 511005941}
   - component: {fileID: 511005940}
   m_Layer: 0
   m_Name: Slingshot
@@ -255,11 +256,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 0}
-  prefabProjectile: {fileID: 0}
-  VelocityMult: 8
+  prefabProjectile: {fileID: 1640252818554294432, guid: 6341d50a8deb93047ba600e0c5fe90b5, type: 3}
+  VelocityMult: 10
   launchPos: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1640252818554294432, guid: 6341d50a8deb93047ba600e0c5fe90b5, type: 3}
   aimingMode: 0
+--- !u!135 &511005941
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511005938}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569decd09da0f7f489d9ad64cb4ee48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camz: 0
+  easing: 0.05
+  minXY: {x: 0, y: 0}
 --- !u!1 &860328852
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +661,7 @@ GameObject:
   - component: {fileID: 1664662329}
   - component: {fileID: 1664662330}
   m_Layer: 0
-  m_Name: LaunchPoint(Empty)
+  m_Name: LaunchPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +707,7 @@ GameObject:
   - component: {fileID: 1817416472}
   - component: {fileID: 1817416471}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,8 +793,8 @@ Transform:
   m_GameObject: {fileID: 1817416470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 4}
+  m_LocalPosition: {x: 100, y: -10, z: 0}
+  m_LocalScale: {x: 400, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
