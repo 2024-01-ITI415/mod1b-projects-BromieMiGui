@@ -52,6 +52,7 @@ public class MissionDemolition : MonoBehaviour
         castle.transform.position = castlePos;
         shotsTaken = 0;
         SwitchView("wShow Both");
+        ProjectileLine.S.Clear();
         Goal.goalMet = false;
         UpdateGUI();
         mode = GameMode.playing;
