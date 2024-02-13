@@ -10,7 +10,17 @@ public class Slingshot : MonoBehaviour
     public Vector3 launchPos;
     public GameObject projectile;
     public bool aimingMode;
+    static private Slingshot S;
     private Rigidbody projectileRigidbody;
+    static public Vector3 LAUNCH_POS
+    {
+        get
+        {
+            if (S == null) return Vector3.zero;
+            return S.launchPos;
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +29,7 @@ public class Slingshot : MonoBehaviour
     }
     void Awake()
     {
+        S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
