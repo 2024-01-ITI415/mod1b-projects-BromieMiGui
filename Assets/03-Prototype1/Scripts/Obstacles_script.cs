@@ -17,7 +17,7 @@ public class Obstacles_script : MonoBehaviour
     void Update()
     {
         Vector3 po5 = transform.position;
-        po5.x += Speed * Time.deltaTime;
+        po5.y += Speed * Time.deltaTime;
         transform.position = po5;
 
         if (po5.y < -UpandDownEdge)

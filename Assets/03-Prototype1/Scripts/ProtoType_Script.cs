@@ -23,7 +23,7 @@ public class ProtoType_Script : MonoBehaviour
     public int level;
     public int levelMax;
     public int shotsTaken;
-    public GameObject castle;
+    public GameObject Post;
     public GameMode mode = GameMode.idle;
     public string showing = "Show Slingshot";
     // Start is called before the first frame update
@@ -36,17 +36,17 @@ public class ProtoType_Script : MonoBehaviour
     }
     void StartLevel()
     {
-        if (castle != null)
+        if (Post != null)
         {
-            Destroy(castle);
+            Destroy(Post);
         }
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Projectile");
         foreach (GameObject pTemp in gos)
         {
             Destroy(pTemp);
         }
-        castle = Instantiate<GameObject>(Posts[level]);
-        castle.transform.position = PostPos;
+        Post = Instantiate<GameObject>(Posts[level]);
+        Post.transform.position = PostPos;
         shotsTaken = 0;
         SwitchView("wShow Both");
         ProjectileLine.S.Clear();
@@ -93,7 +93,7 @@ public class ProtoType_Script : MonoBehaviour
                 uitButton.text = "Show Both";
                 break;
             case "Show Castle":
-                FollowCam.POI = S.castle;
+                FollowCam.POI = S.Post;
                 uitButton.text = "Show Both";
                 break;
             case "Show Both":
