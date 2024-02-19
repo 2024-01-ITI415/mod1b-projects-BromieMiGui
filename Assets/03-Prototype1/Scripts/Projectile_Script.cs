@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Projectile_Script : MonoBehaviour
@@ -9,12 +10,13 @@ public class Projectile_Script : MonoBehaviour
     public Text winText;
     private int count;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
-        count = 0;
-        SetCountText();
-        winText.text = "";
+        GameObject scoreGO = GameObject.Find("CountText");
+        countText = scoreGO.GetComponent<Text>();
+        
+
     }
     void OnTriggerEnter(Collider other)
     {
@@ -28,14 +30,12 @@ public class Projectile_Script : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count:" + count.ToString();
-        if (count > 3)
+        if (count >= 6)
         {
             winText.text = "You Win!";
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+      
+
     }
 }
