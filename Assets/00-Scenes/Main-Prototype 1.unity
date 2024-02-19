@@ -494,7 +494,7 @@ MonoBehaviour:
   uitButton: {fileID: 930306465}
   PostPos: {x: 0, y: 0, z: 0}
   Posts:
-  - {fileID: 8678677634778035143, guid: fb4e29531ed994d43967c1c0fd89c949, type: 3}
+  - {fileID: 8678677634778035143, guid: 3726fd9423d67cb41b2783c973af8174, type: 3}
   - {fileID: 8678677634778035143, guid: fb4e29531ed994d43967c1c0fd89c949, type: 3}
   level: 0
   levelMax: 0
@@ -1406,7 +1406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2056174171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2068410353
 RectTransform:
   m_ObjectHideFlags: 0
